@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/HelloServlet")
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+        private static final String VERSION_ID="release 1.0";
+
 
     /**
      * Default constructor. 
@@ -28,6 +30,7 @@ public class HelloServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.getWriter().append(VERSION_ID + "<br>");
 		response.getWriter().append("Served at: ").append(request.getContextPath() + " " +new Date());
 	}
 
